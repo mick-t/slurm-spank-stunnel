@@ -278,7 +278,12 @@ int _stunnel_connect_nodes (char* nodes)
 {
 
     char* host;
+#if SLURM_VERSION_NUMBER > SLURM_VERSION_NUM(23,2,5)
+    // https://github.com/SchedMD/slurm/commit/ba44a526021e3590f53aa65851915a04f7df3c1d
+    hostlist_t *hlist;
+#else
     hostlist_t hlist;
+#endif
 
     // Connect to the first host in the list
     hlist = slurm_hostlist_create(nodes);
