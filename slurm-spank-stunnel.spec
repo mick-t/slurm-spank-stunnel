@@ -1,6 +1,6 @@
 Summary: Slurm SPANK plugin for SSH tunneling and port forwarding support
 Name: slurm-spank-stunnel
-Version: 0.2.2
+Version: 0.2.3
 Release: 1 
 License: GPL
 Group: System Environment/Base
